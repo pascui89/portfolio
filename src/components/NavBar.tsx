@@ -1,4 +1,6 @@
-import { Box, Flex, chakra, Link, Wrap, WrapItem, Avatar } from '@chakra-ui/react';
+import { Box, Flex, chakra, Link, Wrap, WrapItem, Avatar, Text } from '@chakra-ui/react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMailBulk } from '@fortawesome/free-solid-svg-icons';
 
 interface IProps {
   selectedLink: string; 
@@ -25,9 +27,25 @@ const NavBar = (props: IProps) => {
             <Avatar size='xl' name='Pascual Prados' src="img/Profile.jpeg" borderColor={'#226663'} border={'1px solid'} />{' '}
           </WrapItem>
         </Wrap>
-        <chakra.h1 fontSize="3xl" fontWeight="bold" textAlign="center">
-          Showcasing Professional Excellence
-        </chakra.h1>
+        <Flex alignItems="center" justifyContent="space-between" direction={'column'}>
+          <chakra.h1 fontSize="3xl" fontWeight="bold" textAlign="center">
+            Showcasing Professional Excellence
+          </chakra.h1>
+          <Flex alignItems="center" justifyContent="space-between" width={'100%'}>
+            <Link onClick={() => window.open('https://www.linkedin.com/in/pascual-antonio-prados-l%C3%B3pez-a6b90396/', '_blank')}>
+              <Flex alignItems="center" justifyContent="space-between">
+                <Avatar name="Linkedin" src={`img/Linkedin.svg`} size='sm' />
+                <Text ml={2}>Linkedin</Text>
+              </Flex>
+            </Link>
+            <Link onClick={() =>  window.open(`mailto:papradoslopez@gmail.com`)}>
+              <Flex alignItems="center" justifyContent="space-between">
+                <FontAwesomeIcon icon={faMailBulk} />
+                <Text ml={2}>papradoslopez@gmail.com</Text>
+              </Flex>
+            </Link>
+          </Flex>
+        </Flex>
         <Box display={{ base: 'none', md: 'flex' }}>
           <Link
             href="#"
@@ -40,6 +58,18 @@ const NavBar = (props: IProps) => {
             transition="all 0.3s ease"
           >
             About Me
+          </Link>
+          <Link
+            href="#"
+            ml={4}
+            onClick={() => handleLinkClick('experience')}
+            _hover={{ textDecoration: 'none', color: '#2c2c2e' }}
+            _focus={{ outline: 'none', textDecoration: 'none', color: '#2c2c2e' }}
+            fontSize="lg"
+            fontWeight={props.selectedLink === 'experience' ? 'bold' : 'normal'}
+            transition="all 0.3s ease"
+          >
+            Experience
           </Link>
           <Link
             href="#"
