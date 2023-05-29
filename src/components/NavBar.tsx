@@ -22,7 +22,7 @@ const NavBar = (props: IProps) => {
       px={4}
       py={2}
       color="white"
-      style={{ borderRadius: '5px', position: 'sticky', top: 5, zIndex: 9000 }}
+      style={{ borderRadius: '5px', position: 'sticky', top: 0, zIndex: 9000 }}
     >
       <Flex alignItems="center" justifyContent="space-between">
         <Wrap>

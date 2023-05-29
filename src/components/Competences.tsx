@@ -28,8 +28,9 @@ const renderProcess = (key: number, technology: string, percent: number) => {
 
     return (  
       <Box display={'flex'} key={`Box-${key}`}>
-        <Text flex={1} textAlign={'left'} fontWeight={'semibold'} key={`Tech-${key}`}>{technology}</Text>
-        <Progress key={`Progress-${key}`} flex={1} mt={2} colorScheme='green' size='sm' value={currentPercent} isAnimated />
+        <Text flex={1} textAlign={'right'} fontWeight={'semibold'} key={`Tech-${key}`} mr={4}>{technology}</Text>
+        <Progress key={`Progress-${key}`} flex={1} mt={2} colorScheme='green' size='sm' value={currentPercent} isAnimated 
+          bgColor={'#d5dadf'}/>
       </Box>
     );
 }
