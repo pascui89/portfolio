@@ -28,7 +28,13 @@ export const messages: Messages = {
     Pivotal: 'For two years at Pivotal I spearheaded the creation of the web from scratch with architectures like React/Redux with libraries like React MUI.',
     Sequel: 'Two years of constant learning in application development for Underwriters in Angular and C# for banking in England.',
     Fujitsu: 'Four years of development in the ATM monitoring web, React/Redux, Angular and Java were our pillars for the creation of our applications.',
-    Indra: 'Great experience during this period in the creation and development of applications in which I worked with Java, Typescripts.'
+    Indra: 'Great experience during this period in the creation and development of applications in which I worked with Java, Typescripts.',
+    competencias: 'Competencies',
+    idiomas: 'Languages',
+    experiencia: 'Experience',
+    aptitudes: 'Skills',
+    compromiso: 'Engagement',
+    work: 'Work'
   },
   es: {
     about: 'Sobre mí',
@@ -51,7 +57,13 @@ export const messages: Messages = {
     Pivotal: 'Durante dos años en Pivotal encabecé la creación de de la web desde cero con arquitecturas como React/Redux con librerías como React MUI.',
     Sequel: 'Dos años de constante aprendizaje en desarrollo de aplicaciones para Underwriters en Angular y C# para la banca de inglaterra.',
     Fujitsu: 'Cuatro años de desarrollo en la web de monitorización de cajeros, React/Redux, Angular y Java fueros nuestros pilares para la creación de nuestras aplicaciones.',
-    Indra: 'Gran experiencia durante este periodo en creación y desarrollo de aplicaciones en el que trabajé con Java, Typescripts.'
+    Indra: 'Gran experiencia durante este periodo en creación y desarrollo de aplicaciones en el que trabajé con Java, Typescripts.',
+    competencias: 'Competencias',
+    idiomas: 'Idiomas',
+    experiencia: 'Experiencia',
+    aptitudes: 'Aptitudes',
+    compromiso: 'Compromiso',
+    work: 'Trabajo'
   },
   // Añade más idiomas y mensajes según tus necesidades
 };

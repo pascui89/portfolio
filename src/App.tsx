@@ -17,7 +17,7 @@ function App(): JSX.Element {
 
   useEffect(() => {
     setIsLoaded(true);
-    setCurrentLocale('en');
+    setCurrentLocale('es');
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
