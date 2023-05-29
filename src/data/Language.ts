@@ -34,7 +34,8 @@ export const messages: Messages = {
     experiencia: 'Experience',
     aptitudes: 'Skills',
     compromiso: 'Engagement',
-    work: 'Work'
+    work: 'Work',
+    title2: 'Reasons to trust our work'
   },
   es: {
     about: 'Sobre mí',
@@ -49,7 +50,7 @@ export const messages: Messages = {
     text3: 'Mi enfoque profesional se basa en la excelencia y la calidad en cada proyecto en el que participo. Mi objetivo es superar las expectativas y proporcionar soluciones efectivas y creativas para los desafíos que se me presenten. La confianza es un valor fundamental para mí, y me esfuerzo por establecer relaciones sólidas con mis clientes y compañeros de equipo, basadas en la transparencia, la comunicación abierta y el respeto mutuo.',
     text4: 'Durante mi carrera, he tenido la oportunidad de trabajar en una amplia gama de proyectos, desde pequeñas empresas hasta corporaciones de renombre internacional. Mi enfoque versátil me ha permitido adquirir experiencia en diferentes industrias y dominar diversas herramientas y tecnologías. Estoy comprometido/a con el aprendizaje continuo y me mantengo actualizado/a con las últimas tendencias y avances en mi campo.',
     text5: 'En mi portfolio, encontrarás ejemplos de mis proyectos más destacados, donde podrás apreciar mi habilidad para enfrentar desafíos técnicos y mi capacidad para ofrecer soluciones innovadoras. Cada proyecto representa una oportunidad para demostrar mi creatividad, habilidades de resolución de problemas y enfoque estratégico.',
-    text6: 'Te invito a explorar mi portfolio y descubrir cómo mi experiencia, profesionalidad y enfoque centrado en el trabajo en equipo pueden contribuir a tus proyectos y objetivos. Si estás interesado/a en colaborar conmigo o tienes alguna pregunta, no dudes en contactarme. Estoy ansioso/a por formar parte de nuevos desafíos emocionantes y ayudarte a alcanzar el éxito.',
+    text6: 'Te invito a explorar mi portfolio y descubrir cómo mi experiencia, profesionalidad y enfoque centrado en el trabajo en equipo pueden contribuir a tus proyectos y objetivos. Si estás interesado/a en colaborar conmigo o tienes alguna pregunta, no dudes en contactarme. Estoy ansioso por formar parte de nuevos desafíos emocionantes y ayudarte a alcanzar el éxito.',
     text7: 'Gracias por visitar mi página de portfolio. Espero tener la oportunidad de trabajar juntos y construir una relación profesional duradera basada en la confianza y la excelencia.',
     attitudes1: 'Proactivo',
     attitudes2: 'Inquieto',
@@ -63,7 +64,8 @@ export const messages: Messages = {
     experiencia: 'Experiencia',
     aptitudes: 'Aptitudes',
     compromiso: 'Compromiso',
-    work: 'Trabajo'
+    work: 'Trabajo',
+    title2: 'Razones por las que confiar en nuestro trabajo'
   },
   // Añade más idiomas y mensajes según tus necesidades
 };

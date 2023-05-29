@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
 import './App.css';
-import { ChakraProvider, Box, Divider } from '@chakra-ui/react';
+import { ChakraProvider, Box, Divider, Flex } from '@chakra-ui/react';
 import { IntlProvider } from 'react-intl'; // Importa los componentes necesarios de react-intl
+import { Container } from '@chakra-ui/react';
 
 import NavBar from './components/NavBar';
 
@@ -42,19 +43,21 @@ function App(): JSX.Element {
   return (
     <ChakraProvider>
       <IntlProvider locale={currentLocale} messages={messages[currentLocale]}>
-        <NavBar 
-          selectedLink={selectedLink} 
-          currentLocale={currentLocale}
-          setSelectedLink={setSelectedLink} 
-          setCurrentLocale={setCurrentLocale}
-        />
-        <Box mt={8} px={4} maxWidth="8xl" display={'flex'}>
-          <AboutMe isLoaded={isLoaded} />
-          <Box width="25%" marginLeft="4" borderLeftWidth="1px" pl={6}>
-            <Competences isLoaded={isLoaded} />
-            <Attitudes isLoaded={isLoaded} />
-          </Box>
-        </Box>
+        <Container mt={8} px={4} maxWidth={'8xl'}>
+          <NavBar 
+            selectedLink={selectedLink} 
+            currentLocale={currentLocale}
+            setSelectedLink={setSelectedLink} 
+            setCurrentLocale={setCurrentLocale}
+          />
+          <Flex gap={1} mt={2}>
+            <AboutMe isLoaded={isLoaded} />
+            <Box width="20%" marginLeft="4" borderLeftWidth="1px" pl={6} m={4} >
+              <Competences isLoaded={isLoaded} />
+              <Attitudes isLoaded={isLoaded} />
+            </Box>
+          </Flex>
+        </Container>
         <Divider mt={8} />
       </IntlProvider>
     </ChakraProvider>

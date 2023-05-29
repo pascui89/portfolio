@@ -31,7 +31,7 @@ export function CircularProgressWrapper(props: IProp): JSX.Element {
             <CircularProgress value={currentPercent} size='150px' color='green'>
                 <CircularProgressLabel>{currentPercent}%</CircularProgressLabel>
             </CircularProgress>
-            <Text fontSize="xl" lineHeight="tall" fontWeight={'semibold'}>
+            <Text fontSize="xl" lineHeight="tall" fontWeight={'semibold'} textAlign={'center'}>
               <FormattedMessage id={props.formattedMessage} />
             </Text>
         </Box>
