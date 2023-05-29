@@ -34,14 +34,20 @@ const NavBar = (props: IProps) => {
           <Flex alignItems="center" justifyContent="space-between" width={'100%'}>
             <Link onClick={() => window.open('https://www.linkedin.com/in/pascual-antonio-prados-l%C3%B3pez-a6b90396/', '_blank')}>
               <Flex alignItems="center" justifyContent="space-between">
-                <Avatar name="Linkedin" src={`img/Linkedin.svg`} size='sm' />
+                <Avatar name="Linkedin" src="Linkedin.svg" size='sm' />
                 <Text ml={2}>Linkedin</Text>
               </Flex>
             </Link>
             <Link onClick={() =>  window.open(`mailto:papradoslopez@gmail.com`)}>
               <Flex alignItems="center" justifyContent="space-between">
                 <FontAwesomeIcon icon={faMailBulk} />
-                <Text ml={2}>papradoslopez@gmail.com</Text>
+                <Text ml={2}>Mail</Text>
+              </Flex>
+            </Link>
+            <Link onClick={() => window.open('https://github.com/pascui89', '_blank')}>
+              <Flex alignItems="center" justifyContent="space-between">
+                <Avatar name="GitHub" src="GitHub.svg" size='sm' />
+                <Text ml={2}>GitHub</Text>
               </Flex>
             </Link>
           </Flex>
@@ -50,7 +56,13 @@ const NavBar = (props: IProps) => {
           <Link
             href="#"
             ml={4}
-            onClick={() => handleLinkClick('about')}
+            onClick={() => {
+              handleLinkClick('about');
+              window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+              });
+            }}
             _hover={{ textDecoration: 'none', color: '#2c2c2e' }}
             _focus={{ outline: 'none', textDecoration: 'none', color: '#2c2c2e' }}
             fontSize="lg"
@@ -62,7 +74,13 @@ const NavBar = (props: IProps) => {
           <Link
             href="#"
             ml={4}
-            onClick={() => handleLinkClick('experience')}
+            onClick={() => {
+              handleLinkClick('experience');
+              window.scrollTo({
+                top: 1400,
+                behavior: 'smooth'
+              });
+            }}
             _hover={{ textDecoration: 'none', color: '#2c2c2e' }}
             _focus={{ outline: 'none', textDecoration: 'none', color: '#2c2c2e' }}
             fontSize="lg"
@@ -83,20 +101,6 @@ const NavBar = (props: IProps) => {
           >
             Services
           </Link>
-          <Link
-            href="#"
-            ml={4}
-            mr={4}
-            onClick={() => handleLinkClick('contact')}
-            _hover={{ textDecoration: 'none', color: '#2c2c2e' }}
-            _focus={{ outline: 'none', textDecoration: 'none', color: '#2c2c2e' }}
-            fontSize="lg"
-            fontWeight={props.selectedLink === 'contact' ? 'bold' : 'normal'}
-            transition="all 0.3s ease"
-          >
-            Contact
-          </Link>
-          {/* Add more navigation links as needed */}
         </Box>
       </Flex>
     </chakra.nav>
