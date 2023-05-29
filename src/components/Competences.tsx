@@ -39,13 +39,13 @@ export function Competences(props: IProp): JSX.Element {
         <Stack spacing={5}>
             <Code colorScheme='yellow' children='npm install successful-career' />
             <Box>
-            <chakra.p color={'#38B2AC'} fontSize="xl" lineHeight="tall" fontWeight={'bold'}>Competencias</chakra.p>
+              <chakra.p color={'#38B2AC'} fontSize="xl" lineHeight="tall" fontWeight={'bold'}>Competencias</chakra.p>
             </Box>
             {competences.map(c => renderProcess(c.technology, c.percent))}
         </Stack>
         <Stack spacing={5} mt={4}>
             <Box>
-            <chakra.p color={'#38B2AC'} fontSize="xl" lineHeight="tall" fontWeight={'bold'}>Idiomas</chakra.p>
+              <chakra.p color={'#38B2AC'} fontSize="xl" lineHeight="tall" fontWeight={'bold'}>Idiomas</chakra.p>
             </Box>
             {languages.map(c => renderProcess(c.technology, c.percent))}
         </Stack>
