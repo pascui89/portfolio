@@ -11,7 +11,7 @@ interface IProp {
 export function AboutMe(props: IProp): JSX.Element {
 
     return (
-        <Box width="75%" m={4}>
+        <Box>
           <Fade in={props.isLoaded} transition={{ enter: { duration: 0.5 } }}>
             <Flex alignItems="center" gap={4} justifyContent="space-between" width={'100%'}>
               <Flex alignItems="center" gap={4} direction={'column'} width={'100%'}>
@@ -25,7 +25,7 @@ export function AboutMe(props: IProp): JSX.Element {
                   <FormattedMessage id="text3" />
                 </Box>
               </Flex>
-              <Image boxSize={"container.sm"} src="img/Pascual-PortFolio.png" sx={{ borderRadius: '5px' }}/>
+              <Image boxSize={"container.sm"} src="img/Pascual-PortFolio.png" sx={{ borderRadius: '5px', boxShadow: '10px 5px 5px #38a169' }}/>
             </Flex>
             <Flex alignItems="center" gap={4} justifyContent="space-between" width={'100%'} m={4}>
               <CircularProgressWrapper percent={100} formattedMessage="work" />

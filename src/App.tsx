@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import './App.css';
-import { ChakraProvider, Box, Flex, Code } from '@chakra-ui/react';
+import { ChakraProvider, Box, Code, Grid, GridItem } from '@chakra-ui/react';
 import { IntlProvider } from 'react-intl'; // Importa los componentes necesarios de react-intl
 import { Container } from '@chakra-ui/react';
 
@@ -82,14 +82,20 @@ function App(): JSX.Element {
           setCurrentLocale={setCurrentLocale}
         />
         <Container mt={8} px={4} maxWidth={'8xl'}>
-          <Flex gap={1} mt={2}>
-            <AboutMe isLoaded={isLoaded} isLoadedExperience={isLoadedExperience}/>
-            <Box width="20%" marginLeft="4" borderLeftWidth="1px" pl={6} m={4} >
+          <Grid
+            templateRows='repeat(2, 1fr)'
+            templateColumns='repeat(4, 1fr)'
+            gap={4}
+          >
+            <GridItem rowSpan={2} colSpan={3}>
+              <AboutMe isLoaded={isLoaded} isLoadedExperience={isLoadedExperience}/>
+            </GridItem>
+            <GridItem rowSpan={2} colSpan={1} borderLeftWidth="1px" pl={6} m={4}>
               <Competences isLoaded={isLoaded} />
               <Attitudes isLoaded={isLoaded} />
               <Code colorScheme='gray' mt={4} whiteSpace="pre" children={codeSnippet} />
-            </Box>
-          </Flex>
+            </GridItem>
+          </Grid>
         </Container>
         <Box as="p"  
             width={'100%'} 
