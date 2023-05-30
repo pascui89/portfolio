@@ -59,7 +59,7 @@ const NavBar = (props: IProps) => {
                 onClick={() => {
                   handleLinkClick('about');
                   window.scrollTo({
-                    top: 0,
+                    top: 10,
                     behavior: 'smooth'
                   });
                 }}
@@ -76,7 +76,7 @@ const NavBar = (props: IProps) => {
                 onClick={() => {
                   handleLinkClick('experience');
                   window.scrollTo({
-                    top: 1400,
+                    top: 1000,
                     behavior: 'smooth'
                   });
                 }}
@@ -90,7 +90,13 @@ const NavBar = (props: IProps) => {
               <Link
                 href="#"
                 ml={4}
-                onClick={() => handleLinkClick('services')}
+                onClick={() => {
+                  handleLinkClick('services');
+                  window.scrollTo({
+                    top: 2100,
+                    behavior: 'smooth'
+                  });
+                }}
                 _hover={{ textDecoration: 'none', color: '#2c2c2e' }}
                 _focus={{ outline: 'none', textDecoration: 'none', color: '#2c2c2e' }}
                 fontSize="lg"

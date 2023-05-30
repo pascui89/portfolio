@@ -39,6 +39,7 @@ const codeSnippet = `
 
 function App(): JSX.Element {
   const [isLoaded, setIsLoaded] = useState(false);
+  const [isLoadedExperience, setIsLoadedExperience] = useState(false);
   const [isLoadedServices, setIsLoadedServices] = useState(false);
   const [selectedLink, setSelectedLink] = useState('about');
   const [currentLocale, setCurrentLocale] = useState('en');
@@ -64,6 +65,7 @@ function App(): JSX.Element {
       setIsLoadedServices(true);
       setSelectedLink('services');
     } else if (scrollTop + windowHeight >= 1400) {
+      setIsLoadedExperience(true);
       setSelectedLink('experience');
     } else {
       setSelectedLink('about');
@@ -81,7 +83,7 @@ function App(): JSX.Element {
         />
         <Container mt={8} px={4} maxWidth={'8xl'}>
           <Flex gap={1} mt={2}>
-            <AboutMe isLoaded={isLoaded} />
+            <AboutMe isLoaded={isLoaded} isLoadedExperience={isLoadedExperience}/>
             <Box width="20%" marginLeft="4" borderLeftWidth="1px" pl={6} m={4} >
               <Competences isLoaded={isLoaded} />
               <Attitudes isLoaded={isLoaded} />
