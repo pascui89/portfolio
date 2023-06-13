@@ -1,4 +1,5 @@
 export const competences = [
+    {technology: 'Typescript', percent: 100},
     {technology: 'Javascript', percent: 100},
     {technology: 'HTML', percent: 100},
     {technology: 'React/Redux', percent: 90},
